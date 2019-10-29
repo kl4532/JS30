@@ -30,6 +30,7 @@ body {
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
   margin-bottom: 20px;
+  font-size: 20px;
   cursor: pointer;
 }
 
