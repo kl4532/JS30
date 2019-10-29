@@ -1,0 +1,28 @@
+body{
+    display: flex;
+    justify-content: space-around;
+    background: purple;
+    margin-top: 20vh;
+    flex-wrap: wrap;
+}
+.keys{
+    width: 150px;
+    height: 150px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    color: white;
+    background: gray;
+    transition: all 0.5s;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+.desc{
+    color: gold;
+    pointer-events: none;
+}
+.active{
+    background: rgb(152, 223, 130);
+}
