@@ -1,6 +1,5 @@
 (function(){
 
-    let timeSeconds = getCurrentTime().sec;
     let sec = -90 + getCurrentTime().sec * 6;
     let min = -90 + getCurrentTime().min * 6;
     let hou = -90 + getCurrentTime().hou * 30;
