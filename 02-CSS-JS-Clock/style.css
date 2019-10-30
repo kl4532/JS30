@@ -4,7 +4,6 @@ body {
 
 .center {
   position: absolute;
-  /*it can be fixed too*/
   left: 50%;
   top: 50%;
   -webkit-transform: translate(-50%, -50%);
@@ -27,36 +26,39 @@ body {
   position: absolute;
   top: 50%;
   left: 50%;
-  border-radius: 20%;
+  border-radius: 40%;
   -webkit-transform-origin: 0% 50%;
           transform-origin: 0% 50%;
+  background: black;
 }
 
 .sec {
   width: 140px;
-  background: black;
+}
+
+.min, .hou {
+  height: 5px;
+  -webkit-transition: all 1s;
+  transition: all 1s;
 }
 
 .min {
-  height: 5px;
   width: 116.66667px;
-  background: #c8c886;
-  -webkit-transition: all 1s;
-  transition: all 1s;
 }
 
 .hou {
-  height: 5px;
   width: 87.5px;
-  background: red;
-  -webkit-transition: all 1s;
-  transition: all 1s;
 }
 
 .dot {
   background: black;
-  width: 10px;
-  height: 10px;
+  width: 14px;
+  height: 14px;
   border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -40%);
+  transform: translate(-50%, -40%);
 }
 /*# sourceMappingURL=style.css.map */

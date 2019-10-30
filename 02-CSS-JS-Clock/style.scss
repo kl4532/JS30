@@ -5,7 +5,7 @@ body{
     background: rgb(131, 131, 206);
 }
 .center{
-    position:absolute; /*it can be fixed too*/
+    position:absolute; 
     left:50%; 
     top:50%; 
     -webkit-transform: translate(-50%, -50%);
@@ -27,28 +27,33 @@ body{
     position: absolute;
     top: 50%;
     left: 50%;
-    border-radius: 20%;
+    border-radius: 40%;
     transform-origin: 0% 50%;
+    background: black;
+
 }
 .sec{
     width: $clockHigh/2.5;
-    background: black;
+}
+.min, .hou{
+    height: 5px;
+    transition: all 1s;
+    // border: 1px solid gold;
 }
 .min{
-    height: 5px;
     width: $clockHigh/3;
-    background: rgb(200, 200, 134);
-    transition: all 1s;
 }
 .hou{
-    height: 5px;
     width: $clockHigh/4;    
-    background: red;
-    transition: all 1s;
 }
 .dot{
     background: black;
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;;
+    width: $clockHigh * 0.04;
+    height: $clockHigh * 0.04;
+    border-radius: 50%;
+    position: absolute;
+    left:50%; 
+    top:50%; 
+    -webkit-transform: translate(-50%, -40%);
+    transform: translate(-50%, -40%);
 }
