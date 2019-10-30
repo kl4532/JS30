@@ -29,6 +29,8 @@ body{
     position: absolute;
     top: 50%;
     left: 50%;
+    border-radius: 20%;
+    transform-origin: 0% 50%;
 }
 .sec{
     width: 130px;
@@ -36,9 +38,12 @@ body{
 }
 .min{
     width: 100px;
-    background: yellow;
+    background: rgb(200, 200, 134);
+    transition: all 1s;
 }
 .hou{
     width: 80px;
     background: red;
+    transition: all 1s;
+
 }

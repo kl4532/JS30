@@ -31,6 +31,9 @@ body {
   position: absolute;
   top: 50%;
   left: 50%;
+  border-radius: 20%;
+  -webkit-transform-origin: 0% 50%;
+          transform-origin: 0% 50%;
 }
 
 .sec {
@@ -40,11 +43,15 @@ body {
 
 .min {
   width: 100px;
-  background: yellow;
+  background: #c8c886;
+  -webkit-transition: all 1s;
+  transition: all 1s;
 }
 
 .hou {
   width: 80px;
   background: red;
+  -webkit-transition: all 1s;
+  transition: all 1s;
 }
 /*# sourceMappingURL=style.css.map */
