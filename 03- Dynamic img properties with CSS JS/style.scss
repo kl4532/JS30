@@ -1,9 +1,8 @@
 :root {
-    --spacing: 10px;
+    --spacing: 5px;
     --frameColor: #ffffff;
     --blur: 0px;
 }
-
 
 body{
     background: rgb(36, 36, 36);
@@ -26,6 +25,9 @@ body{
     img{
         width: 400px;
         display: block;
+        @media (max-width: 567px){
+            width: 250px;
+        }
     }
 }
 .center{
