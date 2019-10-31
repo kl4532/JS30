@@ -1,3 +1,10 @@
+:root {
+    --spacing: 10px;
+    --frameColor: #ffffff;
+    --blur: 0px;
+}
+
+
 body{
     background: rgb(36, 36, 36);
     color: #ffffff;
@@ -13,10 +20,12 @@ body{
     }
 }
 .content{
-    padding: 20px;
-    background: red;
+    padding: var(--spacing);
+    background: var(--frameColor);
+    filter: blur(var(--blur));
     img{
         width: 400px;
+        display: block;
     }
 }
 .center{
