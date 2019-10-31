@@ -4,11 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Dynamic</title>
+    <title>Dynamic img properties</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+    <div class="controls center-hor">
+        <div>
+            <label for="spacing">Spacing</label>
+            <input type="range" name="spacing" id="" data-sizing="px">            
+        </div>
+        <div>
+            <label for="blur">Blur</label>
+            <input type="range" name="blur" id="" min="0" max="100" data-sizing="px">            
+        </div>
+        <div>
+            <label for="color">Frame color</label>        
+            <input type="color" name="color" value="#ffffff">        
+        </div>
+    </div>
+    <div class="content center">
+        <img src="mural.png" alt="">
+    </div>
+
     <script src="index.js"></script>
 </body>
 </html>
