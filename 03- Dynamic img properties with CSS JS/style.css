@@ -6,17 +6,20 @@
 
 body {
   background: #242424;
-  color: #ffffff;
+  color: #ffffffbe;
 }
 
 .controls {
+  position: fixed;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 20px;
   text-align: center;
+  z-index: 1;
 }
 
 .controls label {
@@ -28,6 +31,8 @@ body {
   background: var(--frameColor);
   -webkit-filter: blur(var(--blur));
           filter: blur(var(--blur));
+  z-index: 0;
+  margin-top: 30px;
 }
 
 .content img {
