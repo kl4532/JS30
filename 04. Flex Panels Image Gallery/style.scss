@@ -27,7 +27,7 @@ body{
     transition: all 1s;
 }
 .active{
-    flex: 1 1 6s0%;
+    flex: 1 1 60%;
     .bottom{
         transform: translate(0, 500%);
         transition: all 1s;
@@ -36,6 +36,11 @@ body{
         transform: translate(0, -500%);
         transition: all 1s;
     }
+    .middle{
+        font-size: 100px;
+        color:rgb(217, 255, 0);
+    }
+    
 }
 .top, .bottom{
     position: fixed;
