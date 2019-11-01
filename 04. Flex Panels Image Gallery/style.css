@@ -1,0 +1,27 @@
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.container div:nth-child(odd) {
+  background: red;
+}
+
+.container div:nth-child(even) {
+  background: blue;
+}
+
+.item {
+  height: 100vh;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.selected {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 80%;
+          flex: 1 1 80%;
+}
+/*# sourceMappingURL=style.css.map */
