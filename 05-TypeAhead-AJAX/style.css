@@ -1,4 +1,18 @@
 body {
   background: #b1b100;
 }
+
+body ul {
+  padding: 0;
+  margin: 0;
+}
+
+body ul li {
+  text-transform: capitalize;
+  list-style: none;
+}
+
+body .hl {
+  background: yellow;
+}
 /*# sourceMappingURL=style.css.map */

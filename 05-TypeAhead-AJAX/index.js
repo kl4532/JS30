@@ -9,7 +9,16 @@
         document.querySelector('.results').innerHTML = "";
         filterData(input.value).forEach(el => {
             let child = document.createElement('li');
-            child.innerHTML = `${el.city}, ${el.state} ${insertCommas(el.pop)}`;
+            const regex = new RegExp('(' + input.value + ')', 'gi');
+            const city= el.city.replace(regex, `<span class="hl">${input.value}</span>`);
+            const state = el.state.replace(regex, `<span class="hl">${input.value}</span>`);
+            let html = `
+            <li>
+                <span class="name">${city}, ${state}</span>
+                <span class="pop">${insertCommas(el.pop)}</span>
+            </li>
+            `
+            child.innerHTML = html
             document.querySelector('.results').appendChild(child)
         })
     })

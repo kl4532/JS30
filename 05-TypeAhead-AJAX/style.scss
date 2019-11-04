@@ -1,3 +1,14 @@
 body{
     background: rgb(177, 177, 0);
+    ul{
+        padding: 0;
+        margin: 0;
+        li{
+            text-transform: capitalize;
+            list-style:none;
+        }
+    }
+    .hl{
+        background: yellow;
+    }
 }
