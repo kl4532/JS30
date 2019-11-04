@@ -2,17 +2,58 @@ body {
   background: #b1b100;
 }
 
-body ul {
+.container {
+  text-align: center;
+}
+
+.container input {
+  width: 80%;
+  font-size: 30px;
+  padding: 10px;
+  border: 5px solid #dbdbdb;
+  border-radius: 10px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  outline: none;
+  text-align: center;
+}
+
+ul {
   padding: 0;
   margin: 0;
+  text-align: center;
+  display: inline-block;
 }
 
-body ul li {
+ul li:nth-child(odd) {
+  background: #d3ff5a;
+  -webkit-transform: perspective(90px) rotateX(5deg);
+          transform: perspective(90px) rotateX(5deg);
+}
+
+ul li:nth-child(even) {
+  background: #7bc4ff;
+  -webkit-transform: perspective(90px) rotateX(-5deg);
+          transform: perspective(90px) rotateX(-5deg);
+}
+
+ul li {
   text-transform: capitalize;
   list-style: none;
+  min-width: 150px;
+  padding: 10px 10px;
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.14);
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.14);
 }
 
-body .hl {
+.pop {
+  color: #ff0055;
+  float: right;
+}
+
+.hl {
   background: yellow;
 }
 /*# sourceMappingURL=style.css.map */
