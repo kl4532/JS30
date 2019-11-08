@@ -1,0 +1,27 @@
+:root {
+    --size: 45px;
+    --color: #57008a;
+    --blur: 0px;
+}
+
+body{
+    background: coral;
+    margin: 0;
+    
+}
+.center-hor{
+    margin-left: 50%;
+    -webkit-transform: translate(-50%, 0%);
+    transform: translate(-50%, 0%);
+}
+.sample{
+    width: var(--size);
+    height: var(--size);
+    background-color: var(--color);
+    filter: blur(var(--blur));
+    border-radius: 50%;
+    display: inline-block;
+}
+canvas{
+    cursor: crosshair;
+}
