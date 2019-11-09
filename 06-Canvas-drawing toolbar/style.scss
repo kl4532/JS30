@@ -14,6 +14,16 @@ body{
     -webkit-transform: translate(-50%, 0%);
     transform: translate(-50%, 0%);
 }
+.toolbox{
+    display: flex;
+    flex-direction: column;
+    margin-left: 5px;
+    user-select: none;
+}
+.container{
+    display: flex;
+
+}
 .sample{
     width: var(--size);
     height: var(--size);

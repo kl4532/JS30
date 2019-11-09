@@ -9,16 +9,20 @@
     <link rel="shortcut icon" href="pic.ico" type="image/x-icon">    
 </head>
 <body>
+    
+    <div class="container">
         <canvas id="myCanvas" width="1000" height="800" style="border:1px solid #000000;"></canvas>
-
-    <div>
-            <input title="size" type="range" name="size" id="" min="1" max="100" value=10 data-sizing="px">  
-            <input type="color" name="color" value="#00000">
-            <input title="blur" type="range" name="blur" id="" min="0" max="20" value=0 data-sizing="px">   
-            <button id="clear">Clear canvas</button> 
-            <label for="">Sample: </label> 
-            <div class="sample"></div>
-
+        <div class="toolbox">
+                <label for="">Size: </label> 
+                <input title="size" type="range" name="size" id="" min="1" max="150" value=10 data-sizing="px">  
+                <input type="color" name="color" value="#000000">
+                <label for="">Filter: </label> 
+                <input title="blur" type="range" name="blur" id="" min="0" max="20" value=0 data-sizing="px">   
+                <button id="clear">Clear canvas</button> 
+                <label for="">Sample: </label> 
+                <div class="sample"></div>
+                <button class="addImage">Next image</button>
+        </div>
     </div>
 
     <script src="index.js"></script>
