@@ -1,18 +1,15 @@
 :root {
     --size: 45px;
     --color: #57008a;
-    --blur: 0px;
+    --filter: 0px;
 }
 
 body{
     background: coral;
     margin: 0;
-    
 }
-.center-hor{
-    margin-left: 50%;
-    -webkit-transform: translate(-50%, 0%);
-    transform: translate(-50%, 0%);
+.container{
+    display: flex;
 }
 .toolbox{
     display: flex;
@@ -20,18 +17,25 @@ body{
     margin-left: 5px;
     user-select: none;
 }
-.container{
-    display: flex;
-
-}
 .sample{
     width: var(--size);
     height: var(--size);
     background-color: var(--color);
-    filter: blur(var(--blur));
+    filter: blur(var(--filter));
     border-radius: 50%;
     display: inline-block;
+    margin: 10px;
 }
 canvas{
     cursor: crosshair;
+}
+button{
+    padding: 5px;
+    color: white;
+    background: rgb(0, 87, 218);
+    border-radius: 5px;
+    border: 2px solid pink;
+    &:hover{
+        background: rgb(106, 148, 212);
+    }
 }

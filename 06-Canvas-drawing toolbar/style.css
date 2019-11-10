@@ -1,7 +1,7 @@
 :root {
   --size: 45px;
   --color: #57008a;
-  --blur: 0px;
+  --filter: 0px;
 }
 
 body {
@@ -9,10 +9,10 @@ body {
   margin: 0;
 }
 
-.center-hor {
-  margin-left: 50%;
-  -webkit-transform: translate(-50%, 0%);
-  transform: translate(-50%, 0%);
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .toolbox {
@@ -30,23 +30,30 @@ body {
           user-select: none;
 }
 
-.container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
 .sample {
   width: var(--size);
   height: var(--size);
   background-color: var(--color);
-  -webkit-filter: blur(var(--blur));
-          filter: blur(var(--blur));
+  -webkit-filter: blur(var(--filter));
+          filter: blur(var(--filter));
   border-radius: 50%;
   display: inline-block;
+  margin: 10px;
 }
 
 canvas {
   cursor: crosshair;
+}
+
+button {
+  padding: 5px;
+  color: white;
+  background: #0057da;
+  border-radius: 5px;
+  border: 2px solid pink;
+}
+
+button:hover {
+  background: #6a94d4;
 }
 /*# sourceMappingURL=style.css.map */
