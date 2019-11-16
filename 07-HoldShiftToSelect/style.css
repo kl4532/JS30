@@ -1,5 +1,29 @@
+body {
+  text-align: center;
+}
+
+button {
+  font-size: 15px;
+}
+
 .box {
   text-align: center;
   display: block;
+}
+
+.set {
+  padding: 10px 0;
+}
+
+.set input {
+  width: 40px;
+  height: 40px;
+  vertical-align: middle;
+}
+
+.set label {
+  font-size: 50px;
+  vertical-align: middle;
+  margin-left: 10px;
 }
 /*# sourceMappingURL=style.css.map */
