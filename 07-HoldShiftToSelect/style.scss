@@ -3,4 +3,17 @@
     display: block;
 }
 .set{
+    padding: 10px 0;
+    input{
+        width: 50px;
+        height: 50px;
+        vertical-align: middle;
+
+    }
+    label{
+        font-size: 50px;
+        vertical-align: middle;
+        margin-left: 10px;
+
+    }
 }
