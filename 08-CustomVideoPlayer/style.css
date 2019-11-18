@@ -12,4 +12,25 @@ body {
   position: relative;
   bottom: 20px;
 }
+
+.controls-group .control-time {
+  -webkit-appearance: none;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.controls-group .control-time::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 10px;
+  width: 10px;
+  border-radius: 0%;
+  background: blue;
+  cursor: pointer;
+  border: none;
+}
+
+.controls-group .control-time:focus {
+  outline: none;
+}
 /*# sourceMappingURL=style.css.map */
