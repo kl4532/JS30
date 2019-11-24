@@ -1,14 +1,17 @@
 (function(){
+    
     const vid = document.getElementById('myVid');
-    const time = document.getElementById('time')
+    const time = document.getElementById('time')    
+    const startPauseBtn = document.getElementById('btn-play');  
 
-    time.max = vid.duration;
     
     let interval;
 
     document.getElementById('btn-play').addEventListener('click', ()=>{
+        !time.max ? time.max = vid.duration: 0;
         time.value = vid.currentTime;
         vid.paused ? vidPlay() : vidPause();
+        console.log(time.max);
     })
     
     time.addEventListener('input', ()=>{
@@ -17,7 +20,8 @@
         console.log(vid.currentTime);
     })
     time.addEventListener('mouseup', ()=>{
-        vidPlay();
+        !vid.paused ? vidPlay(): vidPause();
+        console.log('play');
     })
 
 
@@ -26,22 +30,22 @@
         return time;
     }
     function vidPause(){
-        interval ? clearInterval(interval) : 0;
+        interval ? clearInterval(interval) : console.log('no inte');;
         vid.pause();
-        // time.value = vid.currentTime;
-
+        startPauseBtn.innerHTML = `<i class="material-icons">play_circle_outline</i>`
     } 
     function vidPlay(){
-        vid.play();
         interval = updateVidTime();
+        vid.play();
+        startPauseBtn.innerHTML = `<i class="material-icons">pause_circle_outline</i>`
     }
 
     function updateVidTime(){
         return setInterval(()=> {
             time.value = vid.currentTime;
-            console.log(time.value);
-            console.log(vid.paused);
-        }, 1000);
+            vid.currentTime === vid.duration ? clearInterval(interval): 0;
+            // console.log(vid.duration, time.value);
+        }, 10);
     }
     
 
