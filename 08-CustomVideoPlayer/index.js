@@ -3,18 +3,32 @@
     const vid = document.getElementById('myVid');
     const time = document.getElementById('time')    
     const volume = document.getElementById('volume');
+    const frame = document.querySelector('.frame');
     const startPauseBtn = document.getElementById('btn-play');  
     
     let interval;
 
+    // load vid duration after content loaded fully (DOMContentLoaded was to fast for video)
+    setTimeout(() => {document.getElementById('vidTime').innerHTML = videoTime();},500);
+
     document.getElementById('btn-play').addEventListener('click', togglePlay);
 
+    //full screen
+    document.getElementById('fScr').addEventListener('click', ()=>{vid.requestFullscreen()});
+
     vid.addEventListener('click', togglePlay);
+
+    frame.addEventListener('mouseover', ()=>{
+        document.querySelector('.controls-group').style.opacity = '1';
+    })
+    frame.addEventListener('mouseout', ()=>{
+        document.querySelector('.controls-group').style.opacity = '0';
+    })
 
     time.addEventListener('input', ()=>{
         vidPause();
         vid.currentTime = time.value;
-        console.log(vid.currentTime);
+        document.getElementById('vidTime').innerHTML = videoTime();
     })
     time.addEventListener('mouseup', ()=>{
         !vid.paused ? vidPlay(): vidPause();
@@ -29,7 +43,6 @@
         !time.max ? time.max = vid.duration: 0;
         time.value = vid.currentTime;
         vid.paused ? vidPlay() : vidPause();
-        console.log(time.max);
     }
     function videoTime(){
         function display(seconds){
@@ -55,8 +68,9 @@
         return setInterval(()=> {
             time.value = vid.currentTime;
             document.getElementById('vidTime').innerHTML = videoTime();
+
+            // when vid finished stop interval
             vid.currentTime === vid.duration ? clearInterval(interval): 0;
-            // console.log(vid.duration, time.value);
         }, 10);
     }
     

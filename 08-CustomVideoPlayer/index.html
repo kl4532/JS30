@@ -12,17 +12,27 @@
 </head>
 <body>
     <br><br>
-    <div class="frame">
-        <video controls id="myVid" width="500" height="300" src="./vid.mp4" type="video/mp4"></video>
+    <div class="frame center">
+        <video id="myVid" width="600" height="400" src="./vid.mp4" type="video/mp4"></video>
         <div class="controls-group">
             <div class="uppers">
-                <span id="btn-play"><i class="material-icons">play_circle_outline</i></span>
-                <span id="vidTime" class="info-time"></span>
-                <input class="control-volume" type="range" name="volume" id="volume" step=0.05 min=0 max=1 value=1>
+                <div class="uppers-left">
+                    <span id="btn-play"><i class="material-icons">play_circle_outline</i></span>
+                    <span id="vidTime" class="info-time"></span>
+                </div>
+                <div class="uppers-left">
+                    <!-- <span >Full</span> -->
+                    <span id="fScr"><i class="material-icons">tv</i></span>
+                    <span><input class="control-volume" type="range" name="volume" id="volume" step=0.05 min=0 max=1 value=1></span>
+                </div>
+                
             </div>
+            
             <input class="control-time" value=0 min=0  step="0.1" type="range" name="time" id="time">
         </div>
+
     </div>
+
     <script src="index.js"></script>
 </body>
 </html>

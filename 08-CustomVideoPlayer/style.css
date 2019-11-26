@@ -3,14 +3,68 @@ body {
 }
 
 .frame {
-  width: 500px;
-  height: 300px;
+  width: 600px;
+  height: 400px;
   background: black;
+  text-align: center;
+}
+
+.center {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
 
 .controls-group {
   position: relative;
-  bottom: 0px;
+  bottom: 40px;
+  -webkit-transition: opacity 0.5s linear;
+  transition: opacity 0.5s linear;
+  opacity: 0;
+  z-index: 2147483648;
+}
+
+.controls-group .uppers {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  top: 5px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: rgba(1, 2, 1, 0.4);
+  cursor: pointer;
+}
+
+.controls-group .uppers .uppers-left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.controls-group .uppers .uppers-left span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-right: 10px;
+}
+
+.controls-group .uppers i {
+  color: white;
+}
+
+.controls-group .uppers .info-time {
+  color: white;
+  font-size: 15px;
 }
 
 .controls-group .control-time {
@@ -31,7 +85,12 @@ body {
   border: 5px solid red;
 }
 
+.controls-group .control-time::-ms-fill-lower {
+  background: dodgerblue;
+}
+
 .controls-group .control-volume {
+  float: right;
   -webkit-appearance: none;
   width: 50px;
   height: 2px;
@@ -49,21 +108,5 @@ body {
 
 .controls-group .control-time, .controls-group .control-volume:focus {
   outline: none;
-}
-
-.controls-group .uppers {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  background: rgba(136, 136, 136, 0.1);
-}
-
-.controls-group .uppers i {
-  color: white;
-}
-
-.controls-group .uppers .info-time {
-  color: white;
-  font-size: 15px;
 }
 /*# sourceMappingURL=style.css.map */
