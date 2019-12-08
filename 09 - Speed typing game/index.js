@@ -10,7 +10,7 @@
     let wordsPerMinute=0;
     let clock;
     let startTime;
-    let time = 10;
+    let time = document.getElementById('setTime').value;
 
     document.getElementById('start').addEventListener('click', startGame);
     document.getElementById('setTime').addEventListener('input', ()=>{time=document.getElementById('setTime').value});
@@ -19,7 +19,7 @@
         score = 0;
         document.getElementById('score').innerHTML = `Score: ${score}`;
         document.getElementById('wordsPerMinute').innerHTML = `0`;
-        document.getElementById('start').disabled =  true;
+        disableInput(true);
         startTime = new Date().getTime();
         reset()
         clock = setInterval(function(){
@@ -37,7 +37,7 @@
         // \n Click start to play again!`);
         if (confirm(`Stop! \n Your score is: ${score} with typing speed ${wordsPerMinute} words/minute
         \n Click ok or start to play again!`)) {startGame()}else{reset()};
-        document.getElementById('start').disabled =  false;
+        disableInput(false);
         time = document.getElementById('setTime').value;
     }
     function reset() {
@@ -56,6 +56,18 @@
         document.getElementById('score').innerHTML = `Score: ${score}`;
         reset();
     }
+
+    function disableInput(mode) {
+        if(mode){
+            document.getElementById('start').disabled =  true;
+            document.getElementById('setTime').disabled = true;
+        }else{
+            document.getElementById('start').disabled =  false;
+            document.getElementById('setTime').disabled = false;
+        }
+
+
+    }
     window.addEventListener('keyup', (e)=>{
         if(exceptions.includes(e.key)){
             return;
@@ -69,7 +81,6 @@
         // console.log(currentType.join(''));
         // console.log(currentType.join('').indexOf(currentPassword));
         // console.groupEnd();
-
     })
 
 
